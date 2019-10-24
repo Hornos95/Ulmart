@@ -1,12 +1,13 @@
 package ru.itpark.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-@Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+
+
 public class Phone extends Product {
     private String simType;
     private int numberOfSupportedSimCards;
@@ -15,4 +16,13 @@ public class Phone extends Product {
     private int ramSize;
     private int theAmountOfInternalMemory;
 
+    public Phone(long id, String category, String name, int price, double assessment, boolean availableToOrder, String description, String simType, int numberOfSupportedSimCards, String system, boolean lte, int ramSize, int theAmountOfInternalMemory) {
+        super(id, category, name, price, assessment, availableToOrder, description);
+        this.simType = simType;
+        this.numberOfSupportedSimCards = numberOfSupportedSimCards;
+        this.system = system;
+        this.lte = lte;
+        this.ramSize = ramSize;
+        this.theAmountOfInternalMemory = theAmountOfInternalMemory;
+    }
 }
