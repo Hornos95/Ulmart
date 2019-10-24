@@ -18,15 +18,7 @@ public class ItemService {
 
     public void add(Product item) {
         items.add(item);
-        if (item instanceof Phone) {
-            Phone phone = (Phone) item;
-        }
-        if (item instanceof Outerwear) {
-            Outerwear outerwear = (Outerwear) item;
-        }
-        if (item instanceof Refrigerator) {
-            Refrigerator refrigerator = (Refrigerator) item;
-        }
+
     }
 
     public void addAll(Product... items) {
